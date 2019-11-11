@@ -1,4 +1,4 @@
-package main;
+package engine;
 
 public interface IGameLogic {
     void init();
