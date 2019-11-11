@@ -5,10 +5,10 @@ public enum RenderOrientation {
     EAST(-10, 6),
     SOUTH(-6, -10),
     WEST(10, -6),
-    CORNER_SE(10, 10),
-    CORNER_SW(-10, 10),
-    CORNER_NW(-10, -10),
-    CORNER_NE(10, -10);
+    NORTH_WEST(10, 10),
+    NORTH_EAST(-10, 10),
+    SOUTH_EAST(-10, -10),
+    SOUTH_WEST(10, -10);
 
 
     private final int ratioX;
