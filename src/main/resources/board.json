@@ -1,0 +1,863 @@
+{
+  "tiles": [
+    {
+      "type": "TileGo",
+      "title": "GO",
+      "texture": "tiles\\tileGo",
+      "reward": 0
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleA1",
+      "texture": "tiles\\A1",
+      "property": {
+        "group": 2,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileChest",
+      "title": "Community Chest",
+      "texture": "tiles\\tileChest"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleA2",
+      "texture": "tiles\\A2",
+      "property": {
+        "group": 2,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileTax",
+      "title": "Income Tax",
+      "texture": "tiles\\tileTax1",
+      "tax": 0
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleR1",
+      "texture": "tiles\\R1",
+      "property": {
+        "group": 0,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleB1",
+      "texture": "tiles\\B1",
+      "property": {
+        "group": 3,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileChance",
+      "title": "Chance",
+      "texture": "tiles\\tileChance1"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleB2",
+      "texture": "tiles\\B2",
+      "property": {
+        "group": 3,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleB3",
+      "texture": "tiles\\B3",
+      "property": {
+        "group": 3,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileJailVisiting",
+      "title": "Just Visiting",
+      "texture": "tiles\\tileJailVitising"
+    },
+    {
+      "type": "TileJail",
+      "title": "In Jail",
+      "texture": "tiles\\tileJail",
+      "jailTurns": 3
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleC1",
+      "texture": "tiles\\C1",
+      "property": {
+        "group": 4,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleU1",
+      "texture": "tiles\\U1",
+      "property": {
+        "group": 1,
+        "mult1": 4,
+        "mult2": 10
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleC2",
+      "texture": "tiles\\C2",
+      "property": {
+        "group": 4,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleC3",
+      "texture": "tiles\\C3",
+      "property": {
+        "group": 4,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleR2",
+      "texture": "tiles\\R2",
+      "property": {
+        "group": 0,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleD1",
+      "texture": "tiles\\D1",
+      "property": {
+        "group": 5,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileChest",
+      "title": "Community Chest",
+      "texture": "tiles\\tileChest"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleD2",
+      "texture": "tiles\\D2",
+      "property": {
+        "group": 5,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleD3",
+      "texture": "tiles\\D3",
+      "property": {
+        "group": 5,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileFreeParking",
+      "title": "Free Parking",
+      "texture": "tiles\\tileFreeParking"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleE1",
+      "texture": "tiles\\E1",
+      "property": {
+        "group": 6,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileChance",
+      "title": "Chance",
+      "texture": "tiles\\tileChance2"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleE2",
+      "texture": "tiles\\E2",
+      "property": {
+        "group": 6,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleE3",
+      "texture": "tiles\\E3",
+      "property": {
+        "group": 6,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleR3",
+      "texture": "tiles\\R3",
+      "property": {
+        "group": 0,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleF1",
+      "texture": "tiles\\F1",
+      "property": {
+        "group": 7,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleF2",
+      "texture": "tiles\\F2",
+      "property": {
+        "group": 7,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleU2",
+      "texture": "tiles\\U2",
+      "property": {
+        "group": 1,
+        "mult1": 4,
+        "mult2": 10
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleF3",
+      "texture": "tiles\\F3",
+      "property": {
+        "group": 7,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileJailGoTo",
+      "title": "Go To Jail",
+      "texture": "tiles\\tileJailGoTo"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleG1",
+      "texture": "tiles\\G1",
+      "property": {
+        "group": 8,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleG2",
+      "texture": "tiles\\G2",
+      "property": {
+        "group": 8,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileChest",
+      "title": "Community Chest",
+      "texture": "tiles\\tileChest"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleG3",
+      "texture": "tiles\\G3",
+      "property": {
+        "group": 8,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleR3",
+      "texture": "tiles\\R3",
+      "property": {
+        "group": 0,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "TileChance",
+      "title": "Chance",
+      "texture": "tiles\\tileChance3"
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleH1",
+      "texture": "tiles\\H1",
+      "property": {
+        "group": 9,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    },
+    {
+      "type": "TileTax",
+      "title": "Luxury Tax",
+      "texture": "tiles\\tileTax2",
+      "tax": 0
+    },
+    {
+      "type": "TileProperty",
+      "title": "titleH2",
+      "texture": "tiles\\H2",
+      "property": {
+        "group": 9,
+        "rents": [
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          },
+          {
+            "rent": 0
+          }
+        ],
+        "mortgage": 0,
+        "cost_house": 0,
+        "cost_hotel": 0
+      }
+    }
+  ]
+}
