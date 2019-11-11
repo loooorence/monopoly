@@ -2,12 +2,14 @@
   "tiles": [
     {
       "type": "TileGo",
+      "orientation": "NORTH_WEST",
       "title": "GO",
       "texture": "tiles\\tileGo",
       "reward": 0
     },
     {
       "type": "TileProperty",
+      "orientation": "NORTH",
       "title": "titleA1",
       "texture": "tiles\\A1",
       "property": {
@@ -39,11 +41,13 @@
     },
     {
       "type": "TileChest",
+      "orientation": "NORTH",
       "title": "Community Chest",
       "texture": "tiles\\tileChest"
     },
     {
       "type": "TileProperty",
+      "orientation": "NORTH",
       "title": "titleA2",
       "texture": "tiles\\A2",
       "property": {
@@ -75,12 +79,14 @@
     },
     {
       "type": "TileTax",
+      "orientation": "NORTH",
       "title": "Income Tax",
       "texture": "tiles\\tileTax1",
       "tax": 0
     },
     {
       "type": "TileProperty",
+      "orientation": "NORTH",
       "title": "titleR1",
       "texture": "tiles\\R1",
       "property": {
@@ -103,6 +109,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "NORTH",
       "title": "titleB1",
       "texture": "tiles\\B1",
       "property": {
@@ -134,11 +141,13 @@
     },
     {
       "type": "TileChance",
+      "orientation": "NORTH",
       "title": "Chance",
       "texture": "tiles\\tileChance1"
     },
     {
       "type": "TileProperty",
+      "orientation": "NORTH",
       "title": "titleB2",
       "texture": "tiles\\B2",
       "property": {
@@ -170,6 +179,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "NORTH",
       "title": "titleB3",
       "texture": "tiles\\B3",
       "property": {
@@ -201,17 +211,20 @@
     },
     {
       "type": "TileJailVisiting",
+      "orientation": "NORTH_EAST",
       "title": "Just Visiting",
       "texture": "tiles\\tileJailVitising"
     },
     {
       "type": "TileJail",
+      "orientation": "NORTH_EAST",
       "title": "In Jail",
       "texture": "tiles\\tileJail",
       "jailTurns": 3
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleC1",
       "texture": "tiles\\C1",
       "property": {
@@ -243,6 +256,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleU1",
       "texture": "tiles\\U1",
       "property": {
@@ -253,6 +267,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleC2",
       "texture": "tiles\\C2",
       "property": {
@@ -284,6 +299,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleC3",
       "texture": "tiles\\C3",
       "property": {
@@ -315,6 +331,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleR2",
       "texture": "tiles\\R2",
       "property": {
@@ -337,6 +354,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleD1",
       "texture": "tiles\\D1",
       "property": {
@@ -368,11 +386,13 @@
     },
     {
       "type": "TileChest",
+      "orientation": "EAST",
       "title": "Community Chest",
       "texture": "tiles\\tileChest"
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleD2",
       "texture": "tiles\\D2",
       "property": {
@@ -404,6 +424,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "EAST",
       "title": "titleD3",
       "texture": "tiles\\D3",
       "property": {
@@ -435,11 +456,13 @@
     },
     {
       "type": "TileFreeParking",
+      "orientation": "SOUTH_EAST",
       "title": "Free Parking",
       "texture": "tiles\\tileFreeParking"
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleE1",
       "texture": "tiles\\E1",
       "property": {
@@ -471,11 +494,13 @@
     },
     {
       "type": "TileChance",
+      "orientation": "SOUTH",
       "title": "Chance",
       "texture": "tiles\\tileChance2"
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleE2",
       "texture": "tiles\\E2",
       "property": {
@@ -507,6 +532,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleE3",
       "texture": "tiles\\E3",
       "property": {
@@ -538,6 +564,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleR3",
       "texture": "tiles\\R3",
       "property": {
@@ -560,6 +587,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleF1",
       "texture": "tiles\\F1",
       "property": {
@@ -591,6 +619,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleF2",
       "texture": "tiles\\F2",
       "property": {
@@ -622,6 +651,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleU2",
       "texture": "tiles\\U2",
       "property": {
@@ -632,6 +662,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "SOUTH",
       "title": "titleF3",
       "texture": "tiles\\F3",
       "property": {
@@ -663,11 +694,13 @@
     },
     {
       "type": "TileJailGoTo",
+      "orientation": "SOUTH_WEST",
       "title": "Go To Jail",
       "texture": "tiles\\tileJailGoTo"
     },
     {
       "type": "TileProperty",
+      "orientation": "WEST",
       "title": "titleG1",
       "texture": "tiles\\G1",
       "property": {
@@ -699,6 +732,7 @@
     },
     {
       "type": "TileProperty",
+      "orientation": "WEST",
       "title": "titleG2",
       "texture": "tiles\\G2",
       "property": {
@@ -730,11 +764,13 @@
     },
     {
       "type": "TileChest",
+      "orientation": "WEST",
       "title": "Community Chest",
       "texture": "tiles\\tileChest"
     },
     {
       "type": "TileProperty",
+      "orientation": "WEST",
       "title": "titleG3",
       "texture": "tiles\\G3",
       "property": {
@@ -766,8 +802,9 @@
     },
     {
       "type": "TileProperty",
-      "title": "titleR3",
-      "texture": "tiles\\R3",
+      "orientation": "WEST",
+      "title": "titleR4",
+      "texture": "tiles\\R4",
       "property": {
         "group": 0,
         "rents": [
@@ -788,11 +825,13 @@
     },
     {
       "type": "TileChance",
+      "orientation": "WEST",
       "title": "Chance",
       "texture": "tiles\\tileChance3"
     },
     {
       "type": "TileProperty",
+      "orientation": "WEST",
       "title": "titleH1",
       "texture": "tiles\\H1",
       "property": {
@@ -824,12 +863,14 @@
     },
     {
       "type": "TileTax",
+      "orientation": "WEST",
       "title": "Luxury Tax",
       "texture": "tiles\\tileTax2",
       "tax": 0
     },
     {
       "type": "TileProperty",
+      "orientation": "WEST",
       "title": "titleH2",
       "texture": "tiles\\H2",
       "property": {
