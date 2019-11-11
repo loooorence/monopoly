@@ -1,5 +1,7 @@
-package main;
+package monopoly.main;
 
+import engine.IGameLogic;
+import engine.Window;
 import org.lwjgl.system.MemoryStack;
 
 import java.nio.FloatBuffer;
