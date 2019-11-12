@@ -5,7 +5,7 @@ import org.lwjgl.glfw.*;
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
 
-public class GameEngine implements Runnable {
+public class GameEngine{
 
     private Window window;
     private IGameLogic gameLogic;
@@ -22,18 +22,18 @@ public class GameEngine implements Runnable {
         this.gameLogic = gameLogic;
     }
 
-    @Override
     public void run() {
-        init();
-        loop();
-
-        glfwFreeCallbacks(window.getId());
-        glfwDestroyWindow(window.getId());
-
-        glfwTerminate();
+        try {
+            init();
+            loop();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            cleanup();
+        }
     }
 
-    private void init() {
+    private void init() throws  Exception {
         GLFWErrorCallback.createPrint(System.err).set();
 
         if (!glfwInit()) {
@@ -46,7 +46,7 @@ public class GameEngine implements Runnable {
 
         glfwShowWindow(window.getId());
 
-        gameLogic.init();
+        gameLogic.init(window);
     }
 
     private void loop() {
@@ -54,7 +54,15 @@ public class GameEngine implements Runnable {
             glfwPollEvents();
             gameLogic.update();
             gameLogic.render(window);
-
         }
+    }
+
+    public void cleanup() {
+        gameLogic.cleanup();
+
+        glfwFreeCallbacks(window.getId());
+        glfwDestroyWindow(window.getId());
+
+        glfwTerminate();
     }
 }
