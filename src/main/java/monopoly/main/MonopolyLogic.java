@@ -2,33 +2,18 @@ package monopoly.main;
 
 import engine.IGameLogic;
 import engine.Window;
-import org.lwjgl.system.MemoryStack;
+import monopoly.rendering.Renderer;
 
-import java.nio.FloatBuffer;
-
-import static org.lwjgl.opengl.GL15.*;
-import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.glfw.GLFW.*;
 
 public class MonopolyLogic implements IGameLogic {
 
+    private Renderer renderer;
+
     @Override
-    public void init() {
-        try (MemoryStack stack = stackPush()) {
-            FloatBuffer buffer = stackMallocFloat(3 * 2);
-            buffer.put(-0.5f).put(-0.5f);
-            buffer.put(0.5f).put(-0.5f);
-            buffer.put(0.0f).put(0.5f);
-            buffer.flip();
-
-            int vbo = glGenBuffers();
-            glBindBuffer(GL_ARRAY_BUFFER, vbo);
-
-            glBufferData(GL_ARRAY_BUFFER, buffer, GL_STATIC_DRAW);
-        }
-
-        glEnableClientState(GL_VERTEX_ARRAY);
-        glVertexPointer(2, GL_FLOAT, 0, 0L);
+    public void init(Window window) throws Exception {
+        renderer = new Renderer(window);
+        renderer.init();
     }
 
     @Override
@@ -43,7 +28,12 @@ public class MonopolyLogic implements IGameLogic {
 
     @Override
     public void render(Window window) {
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        renderer.render();
         glfwSwapBuffers(window.getId());
+    }
+
+    @Override
+    public void cleanup() {
+        renderer.cleanup();
     }
 }
