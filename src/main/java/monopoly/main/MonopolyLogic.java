@@ -9,15 +9,17 @@ import static org.lwjgl.glfw.GLFW.*;
 public class MonopolyLogic implements IGameLogic {
 
     private Renderer renderer;
+    private Window window;
 
     @Override
     public void init(Window window) throws Exception {
+        this.window = window;
         renderer = new Renderer(window);
         renderer.init();
     }
 
     @Override
-    public void input(Window window, int key, int scancode, int action, int mods) {
+    public void input(int key, int scancode, int action, int mods) {
 
     }
 
@@ -27,8 +29,8 @@ public class MonopolyLogic implements IGameLogic {
     }
 
     @Override
-    public void render(Window window) {
-        renderer.render();
+    public void render(double alpha) {
+        renderer.render(alpha);
         glfwSwapBuffers(window.getId());
     }
 

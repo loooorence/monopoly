@@ -1,5 +1,6 @@
 package engine;
 
+import monopoly.util.Timer;
 import org.lwjgl.glfw.*;
 
 import static org.lwjgl.glfw.Callbacks.*;
@@ -10,16 +11,21 @@ public class GameEngine{
     private Window window;
     private IGameLogic gameLogic;
 
+    private Timer timer;
+
+    private final int TARGET_UPS = 30;
+
     private GLFWKeyCallback keyCallback = new GLFWKeyCallback() {
         @Override
         public void invoke(long windowID, int key, int scancode, int action, int mods) {
-            gameLogic.input(window, key, scancode, action, mods);
+            gameLogic.input(key, scancode, action, mods);
         }
     };
 
     public GameEngine(String title, int width, int height, boolean vSync, IGameLogic gameLogic) {
         this.window = new Window(title, width, height, vSync);
         this.gameLogic = gameLogic;
+        timer = new Timer();
     }
 
     public void run() {
@@ -47,13 +53,28 @@ public class GameEngine{
         glfwShowWindow(window.getId());
 
         gameLogic.init(window);
+        timer.init();
     }
 
     private void loop() {
+        double delta;
+        double accumulator = 0.0;
+        double interval = 1.0 / TARGET_UPS;
+        double alpha;
+
         while (!glfwWindowShouldClose(window.getId())) {
+            delta = timer.getDeltaTime();
+            accumulator += delta;
+
             glfwPollEvents();
-            gameLogic.update();
-            gameLogic.render(window);
+            while (accumulator >= interval) {
+                gameLogic.update();
+                accumulator -= interval;
+            }
+
+            alpha = accumulator / interval;
+
+            gameLogic.render(alpha);
         }
     }
 
