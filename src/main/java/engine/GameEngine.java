@@ -15,13 +15,6 @@ public class GameEngine{
 
     private final int TARGET_UPS = 30;
 
-    private GLFWKeyCallback keyCallback = new GLFWKeyCallback() {
-        @Override
-        public void invoke(long windowID, int key, int scancode, int action, int mods) {
-            gameLogic.input(key, scancode, action, mods);
-        }
-    };
-
     public GameEngine(String title, int width, int height, boolean vSync, IGameLogic gameLogic) {
         this.window = new Window(title, width, height, vSync);
         this.gameLogic = gameLogic;
@@ -48,7 +41,15 @@ public class GameEngine{
 
         window.createWindow();
 
-        glfwSetKeyCallback(window.getId(), keyCallback);
+        GLFWKeyCallbackI keyCallbackI = (windowId, key, scancode, action, mods) -> {
+            gameLogic.inputKeyboard(key, scancode, action, mods);
+        };
+        GLFWMouseButtonCallbackI mouseCallbackI = (windowID, button, action, mods) -> {
+            gameLogic.inputMouseButton(button, action, mods);
+        };
+
+        glfwSetKeyCallback(window.getId(), keyCallbackI);
+        glfwSetMouseButtonCallback(window.getId(), mouseCallbackI);
 
         glfwShowWindow(window.getId());
 

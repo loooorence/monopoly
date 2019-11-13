@@ -19,7 +19,14 @@ public class MonopolyLogic implements IGameLogic {
     }
 
     @Override
-    public void input(int key, int scancode, int action, int mods) {
+    public void inputKeyboard(int key, int scancode, int action, int mods) {
+        if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE) {
+            glfwSetWindowShouldClose(window.getId(), true);
+        }
+    }
+
+    @Override
+    public void inputMouseButton(int button, int action, int mods) {
 
     }
 

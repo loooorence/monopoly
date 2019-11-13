@@ -3,7 +3,9 @@ package engine;
 public interface IGameLogic {
     void init(Window window) throws Exception;
 
-    void input(int key, int scancode, int action, int mods);
+    void inputKeyboard(int key, int scancode, int action, int mods);
+
+    void inputMouseButton(int button, int action, int mods);
 
     void update();
 
