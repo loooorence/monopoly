@@ -59,7 +59,7 @@ public class Renderer {
         mesh = new Mesh(vertices, indices, colors);
     }
 
-    public void render() {
+    public void render(double alpha) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shaderProgram.bind();
