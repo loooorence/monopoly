@@ -1,0 +1,74 @@
+{
+  "textures": "chance/chance",
+  "cards": [
+    {
+      "text": "0",
+      "advance": 0
+    },
+    {
+      "text": "0",
+      "advance": 24
+    },
+    {
+      "text": "0",
+      "advance": 12
+    },
+    {
+      "text": "0",
+      "advance": 100
+    },
+    {
+      "text": "0",
+      "advance": 200
+    },
+    {
+      "text": "0",
+      "get": "50"
+    },
+    {
+      "text": "0",
+      "freeJail": true
+    },
+    {
+      "text": "0",
+      "advance": -3
+    },
+    {
+      "text": "0",
+      "move": 11
+    },
+    {
+      "text": "0",
+      "repairs": [
+        {
+          "house": 25,
+          "hotel": 100
+        }
+      ]
+    },
+    {
+      "text": "0",
+      "pay": 15
+    },
+    {
+      "text": "0",
+      "advance": 5
+    },
+    {
+      "text": "0",
+      "advance": 40
+    },
+    {
+      "text": "0",
+      "give": 50
+    },
+    {
+      "text": "0",
+      "get": 150
+    },
+    {
+      "text": "0",
+      "get": 100
+    }
+  ]
+}
