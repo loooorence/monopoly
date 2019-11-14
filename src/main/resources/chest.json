@@ -1,0 +1,78 @@
+{
+  "textures": "chest/chest",
+  "cards": [
+    {
+      "text": "0",
+      "advance": 0
+    },
+    {
+      "text": "0",
+      "get": 200
+    },
+    {
+      "text": "0",
+      "pay": 50
+    },
+    {
+      "text": "0",
+      "get": 50
+    },
+    {
+      "text": "0",
+      "freeJail": true
+    },
+    {
+      "text": "0",
+      "move": 11
+    },
+    {
+      "text": "0",
+      "collect": 50
+    },
+    {
+      "text": "0",
+      "get": 100
+    },
+    {
+      "text": "0",
+      "get": 20
+    },
+    {
+      "text": "0",
+      "collect": 10
+    },
+    {
+      "text": "0",
+      "get": 100
+    },
+    {
+      "text": "0",
+      "pay": 50
+    },
+    {
+      "text": "0",
+      "pay": 50
+    },
+    {
+      "text": "0",
+      "get": 25
+    },
+    {
+      "text": "0",
+      "repairs": [
+        {
+          "house": 40,
+          "hotel": 115
+        }
+      ]
+    },
+    {
+      "text": "0",
+      "get": 10
+    },
+    {
+      "text": "0",
+      "get": 100
+    }
+  ]
+}
