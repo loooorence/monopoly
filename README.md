@@ -46,4 +46,8 @@ The version of netbeans that we use is a pain to set up with this project.
 Everything with your fork should be up to date with the latest code now!
 
 ### Pull Requests:
-Coming soon!
+1. In IntelliJ, go to `VCS -> Git -> Create Pull Request`
+2. Select `github.com/eafigal/monopoly.git`
+3. `Title`: Write a concise title describing your changes
+4. `Description`: Write a detailed, in depth description of the changes you've made
+5. Click `Ok`
