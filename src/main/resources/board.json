@@ -5,38 +5,38 @@
       "orientation": "NORTH_WEST",
       "title": "GO",
       "texture": "tiles\\tileGo",
-      "reward": 0
+      "reward": 200
     },
     {
       "type": "TileProperty",
       "orientation": "NORTH",
-      "title": "titleA1",
+      "title": "MEDITERRANEAN AVENUE",
       "texture": "tiles\\A1",
       "property": {
         "group": 2,
         "rents": [
           {
-            "rent": 0
+            "rent": 2
           },
           {
-            "rent": 0
+            "rent": 10
           },
           {
-            "rent": 0
+            "rent": 30
           },
           {
-            "rent": 0
+            "rent": 90
           },
           {
-            "rent": 0
+            "rent": 160
           },
           {
-            "rent": 0
+            "rent": 250
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 30,
+        "cost_house": 50,
+        "cost_hotel": 50
       }
     },
     {
@@ -48,33 +48,33 @@
     {
       "type": "TileProperty",
       "orientation": "NORTH",
-      "title": "titleA2",
+      "title": "BALTIC AVENUE",
       "texture": "tiles\\A2",
       "property": {
         "group": 2,
         "rents": [
           {
-            "rent": 0
+            "rent": 4
           },
           {
-            "rent": 0
+            "rent": 20
           },
           {
-            "rent": 0
+            "rent": 60
           },
           {
-            "rent": 0
+            "rent": 180
           },
           {
-            "rent": 0
+            "rent": 320
           },
           {
-            "rent": 0
+            "rent": 450
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 30,
+        "cost_house": 50,
+        "cost_hotel": 50
       }
     },
     {
@@ -87,22 +87,22 @@
     {
       "type": "TileProperty",
       "orientation": "NORTH",
-      "title": "titleR1",
+      "title": "READING RAILROAD",
       "texture": "tiles\\R1",
       "property": {
         "group": 0,
         "rents": [
           {
-            "rent": 0
+            "rent": 25
           },
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 100
           },
           {
-            "rent": 0
+            "rent": 200
           }
         ]
       }
@@ -110,33 +110,33 @@
     {
       "type": "TileProperty",
       "orientation": "NORTH",
-      "title": "titleB1",
+      "title": "ORIENTAL AVENUE",
       "texture": "tiles\\B1",
       "property": {
         "group": 3,
         "rents": [
           {
-            "rent": 0
+            "rent": 6
           },
           {
-            "rent": 0
+            "rent": 30
           },
           {
-            "rent": 0
+            "rent": 90
           },
           {
-            "rent": 0
+            "rent": 270
           },
           {
-            "rent": 0
+            "rent": 400
           },
           {
-            "rent": 0
+            "rent": 550
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 50,
+        "cost_house": 50,
+        "cost_hotel": 50
       }
     },
     {
@@ -148,65 +148,65 @@
     {
       "type": "TileProperty",
       "orientation": "NORTH",
-      "title": "titleB2",
+      "title": "VERMONT AVENUE",
       "texture": "tiles\\B2",
       "property": {
         "group": 3,
         "rents": [
           {
-            "rent": 0
+            "rent": 6
           },
           {
-            "rent": 0
+            "rent": 30
           },
           {
-            "rent": 0
+            "rent": 90
           },
           {
-            "rent": 0
+            "rent": 270
           },
           {
-            "rent": 0
+            "rent": 400
           },
           {
-            "rent": 0
+            "rent": 550
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 50,
+        "cost_house": 50,
+        "cost_hotel": 50
       }
     },
     {
       "type": "TileProperty",
       "orientation": "NORTH",
-      "title": "titleB3",
+      "title": "CONNECTICUT AVENUE",
       "texture": "tiles\\B3",
       "property": {
         "group": 3,
         "rents": [
           {
-            "rent": 0
+            "rent": 8
           },
           {
-            "rent": 0
+            "rent": 40
           },
           {
-            "rent": 0
+            "rent": 100
           },
           {
-            "rent": 0
+            "rent": 300
           },
           {
-            "rent": 0
+            "rent": 450
           },
           {
-            "rent": 0
+            "rent": 600
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 60,
+        "cost_house": 50,
+        "cost_hotel": 50
       }
     },
     {
@@ -225,39 +225,39 @@
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleC1",
+      "title": "ST. CHARLES PLACE",
       "texture": "tiles\\C1",
       "property": {
         "group": 4,
         "rents": [
           {
-            "rent": 0
+            "rent": 10
           },
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 150
           },
           {
-            "rent": 0
+            "rent": 450
           },
           {
-            "rent": 0
+            "rent": 625
           },
           {
-            "rent": 0
+            "rent": 750
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 70,
+        "cost_house": 100,
+        "cost_hotel": 100
       }
     },
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleU1",
+      "title": "ELECTRIC COMPANY",
       "texture": "tiles\\U1",
       "property": {
         "group": 1,
@@ -268,86 +268,86 @@
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleC2",
+      "title": "STATES AVENUE",
       "texture": "tiles\\C2",
       "property": {
         "group": 4,
         "rents": [
           {
-            "rent": 0
+            "rent": 10
           },
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 150
           },
           {
-            "rent": 0
+            "rent": 450
           },
           {
-            "rent": 0
+            "rent": 625
           },
           {
-            "rent": 0
+            "rent": 750
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 70,
+        "cost_house": 100,
+        "cost_hotel": 100
       }
     },
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleC3",
+      "title": "VIRGINIA AVENUE",
       "texture": "tiles\\C3",
       "property": {
         "group": 4,
         "rents": [
           {
-            "rent": 0
+            "rent": 12
           },
           {
-            "rent": 0
+            "rent": 60
           },
           {
-            "rent": 0
+            "rent": 180
           },
           {
-            "rent": 0
+            "rent": 500
           },
           {
-            "rent": 0
+            "rent": 700
           },
           {
-            "rent": 0
+            "rent": 900
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 80,
+        "cost_house": 100,
+        "cost_hotel": 100
       }
     },
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleR2",
+      "title": "PENNSYLVANIA RAILROAD",
       "texture": "tiles\\R2",
       "property": {
         "group": 0,
         "rents": [
           {
-            "rent": 0
+            "rent": 25
           },
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 100
           },
           {
-            "rent": 0
+            "rent": 200
           }
         ]
       }
@@ -355,33 +355,33 @@
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleD1",
+      "title": "ST. JAMES PLACE",
       "texture": "tiles\\D1",
       "property": {
         "group": 5,
         "rents": [
           {
-            "rent": 0
+            "rent": 14
           },
           {
-            "rent": 0
+            "rent": 70
           },
           {
-            "rent": 0
+            "rent": 200
           },
           {
-            "rent": 0
+            "rent": 550
           },
           {
-            "rent": 0
+            "rent": 750
           },
           {
-            "rent": 0
+            "rent": 950
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 90,
+        "cost_house": 100,
+        "cost_hotel": 100
       }
     },
     {
@@ -393,65 +393,65 @@
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleD2",
+      "title": "TENNESSEE AVENUE",
       "texture": "tiles\\D2",
       "property": {
         "group": 5,
         "rents": [
           {
-            "rent": 0
+            "rent": 14
           },
           {
-            "rent": 0
+            "rent": 70
           },
           {
-            "rent": 0
+            "rent": 200
           },
           {
-            "rent": 0
+            "rent": 550
           },
           {
-            "rent": 0
+            "rent": 750
           },
           {
-            "rent": 0
+            "rent": 950
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 90,
+        "cost_house": 100,
+        "cost_hotel": 100
       }
     },
     {
       "type": "TileProperty",
       "orientation": "EAST",
-      "title": "titleD3",
+      "title": "NEW YORK AVENUE",
       "texture": "tiles\\D3",
       "property": {
         "group": 5,
         "rents": [
           {
-            "rent": 0
+            "rent": 16
           },
           {
-            "rent": 0
+            "rent": 80
           },
           {
-            "rent": 0
+            "rent": 220
           },
           {
-            "rent": 0
+            "rent": 600
           },
           {
-            "rent": 0
+            "rent": 800
           },
           {
-            "rent": 0
+            "rent": 1000
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 100,
+        "cost_house": 100,
+        "cost_hotel": 100
       }
     },
     {
@@ -463,33 +463,33 @@
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleE1",
+      "title": "KENTUCKY AVENUE",
       "texture": "tiles\\E1",
       "property": {
         "group": 6,
         "rents": [
           {
-            "rent": 0
+            "rent": 18
           },
           {
-            "rent": 0
+            "rent": 90
           },
           {
-            "rent": 0
+            "rent": 250
           },
           {
-            "rent": 0
+            "rent": 700
           },
           {
-            "rent": 0
+            "rent": 875
           },
           {
-            "rent": 0
+            "rent": 1050
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 110,
+        "cost_house": 150,
+        "cost_hotel": 150
       }
     },
     {
@@ -501,86 +501,86 @@
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleE2",
+      "title": "INDIANA AVENUE",
       "texture": "tiles\\E2",
       "property": {
         "group": 6,
         "rents": [
           {
-            "rent": 0
+            "rent": 18
           },
           {
-            "rent": 0
+            "rent": 90
           },
           {
-            "rent": 0
+            "rent": 250
           },
           {
-            "rent": 0
+            "rent": 700
           },
           {
-            "rent": 0
+            "rent": 875
           },
           {
-            "rent": 0
+            "rent": 1050
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 110,
+        "cost_house": 150,
+        "cost_hotel": 150
       }
     },
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleE3",
+      "title": "ILLINOIS AVENUE",
       "texture": "tiles\\E3",
       "property": {
         "group": 6,
         "rents": [
           {
-            "rent": 0
+            "rent": 20
           },
           {
-            "rent": 0
+            "rent": 100
           },
           {
-            "rent": 0
+            "rent": 300
           },
           {
-            "rent": 0
+            "rent": 750
           },
           {
-            "rent": 0
+            "rent": 925
           },
           {
-            "rent": 0
+            "rent": 1100
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 120,
+        "cost_house": 150,
+        "cost_hotel": 150
       }
     },
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleR3",
+      "title": "B&O RAILROAD",
       "texture": "tiles\\R3",
       "property": {
         "group": 0,
         "rents": [
           {
-            "rent": 0
+            "rent": 25
           },
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 100
           },
           {
-            "rent": 0
+            "rent": 200
           }
         ]
       }
@@ -588,71 +588,71 @@
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleF1",
+      "title": "ATLANTIC AVENUE",
       "texture": "tiles\\F1",
       "property": {
         "group": 7,
         "rents": [
           {
-            "rent": 0
+            "rent": 22
           },
           {
-            "rent": 0
+            "rent": 110
           },
           {
-            "rent": 0
+            "rent": 330
           },
           {
-            "rent": 0
+            "rent": 800
           },
           {
-            "rent": 0
+            "rent": 975
           },
           {
-            "rent": 0
+            "rent": 1150
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 130,
+        "cost_house": 150,
+        "cost_hotel": 150
       }
     },
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleF2",
+      "title": "VETNOR AVENUE",
       "texture": "tiles\\F2",
       "property": {
         "group": 7,
         "rents": [
           {
-            "rent": 0
+            "rent": 22
           },
           {
-            "rent": 0
+            "rent": 110
           },
           {
-            "rent": 0
+            "rent": 330
           },
           {
-            "rent": 0
+            "rent": 800
           },
           {
-            "rent": 0
+            "rent": 975
           },
           {
-            "rent": 0
+            "rent": 1150
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 130,
+        "cost_house": 150,
+        "cost_hotel": 150
       }
     },
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleU2",
+      "title": "WATER WORKS",
       "texture": "tiles\\U2",
       "property": {
         "group": 1,
@@ -663,33 +663,33 @@
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "titleF3",
+      "title": "MARVIN GARDENS",
       "texture": "tiles\\F3",
       "property": {
         "group": 7,
         "rents": [
           {
-            "rent": 0
+            "rent": 24
           },
           {
-            "rent": 0
+            "rent": 120
           },
           {
-            "rent": 0
+            "rent": 360
           },
           {
-            "rent": 0
+            "rent": 850
           },
           {
-            "rent": 0
+            "rent": 1025
           },
           {
-            "rent": 0
+            "rent": 1200
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 140,
+        "cost_house": 150,
+        "cost_hotel": 150
       }
     },
     {
@@ -701,65 +701,65 @@
     {
       "type": "TileProperty",
       "orientation": "WEST",
-      "title": "titleG1",
+      "title": "PACIFIC AVENUE",
       "texture": "tiles\\G1",
       "property": {
         "group": 8,
         "rents": [
           {
-            "rent": 0
+            "rent": 26
           },
           {
-            "rent": 0
+            "rent": 130
           },
           {
-            "rent": 0
+            "rent": 390
           },
           {
-            "rent": 0
+            "rent": 900
           },
           {
-            "rent": 0
+            "rent": 1100
           },
           {
-            "rent": 0
+            "rent": 1275
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 150,
+        "cost_house": 200,
+        "cost_hotel": 200
       }
     },
     {
       "type": "TileProperty",
       "orientation": "WEST",
-      "title": "titleG2",
+      "title": "NORTH CAROLINA AVENUE",
       "texture": "tiles\\G2",
       "property": {
         "group": 8,
         "rents": [
           {
-            "rent": 0
+            "rent": 26
           },
           {
-            "rent": 0
+            "rent": 130
           },
           {
-            "rent": 0
+            "rent": 390
           },
           {
-            "rent": 0
+            "rent": 900
           },
           {
-            "rent": 0
+            "rent": 1100
           },
           {
-            "rent": 0
+            "rent": 1275
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 300,
+        "cost_house": 200,
+        "cost_hotel": 200
       }
     },
     {
@@ -771,54 +771,54 @@
     {
       "type": "TileProperty",
       "orientation": "WEST",
-      "title": "titleG3",
+      "title": "PENNSYLVANIA AVENUE",
       "texture": "tiles\\G3",
       "property": {
         "group": 8,
         "rents": [
           {
-            "rent": 0
+            "rent": 28
           },
           {
-            "rent": 0
+            "rent": 150
           },
           {
-            "rent": 0
+            "rent": 450
           },
           {
-            "rent": 0
+            "rent": 1000
           },
           {
-            "rent": 0
+            "rent": 1200
           },
           {
-            "rent": 0
+            "rent": 1400
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 160,
+        "cost_house": 200,
+        "cost_hotel": 200
       }
     },
     {
       "type": "TileProperty",
       "orientation": "WEST",
-      "title": "titleR4",
+      "title": "SHORT LINE",
       "texture": "tiles\\R4",
       "property": {
         "group": 0,
         "rents": [
           {
-            "rent": 0
+            "rent": 25
           },
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 100
           },
           {
-            "rent": 0
+            "rent": 200
           }
         ]
       }
@@ -832,33 +832,33 @@
     {
       "type": "TileProperty",
       "orientation": "WEST",
-      "title": "titleH1",
+      "title": "PARK PLACE",
       "texture": "tiles\\H1",
       "property": {
         "group": 9,
         "rents": [
           {
-            "rent": 0
+            "rent": 35
           },
           {
-            "rent": 0
+            "rent": 175
           },
           {
-            "rent": 0
+            "rent": 500
           },
           {
-            "rent": 0
+            "rent": 1100
           },
           {
-            "rent": 0
+            "rent": 1300
           },
           {
-            "rent": 0
+            "rent": 1500
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 350,
+        "cost_house": 200,
+        "cost_hotel": 200
       }
     },
     {
@@ -871,33 +871,33 @@
     {
       "type": "TileProperty",
       "orientation": "WEST",
-      "title": "titleH2",
+      "title": "BOARDWALK",
       "texture": "tiles\\H2",
       "property": {
         "group": 9,
         "rents": [
           {
-            "rent": 0
+            "rent": 50
           },
           {
-            "rent": 0
+            "rent": 200
           },
           {
-            "rent": 0
+            "rent": 600
           },
           {
-            "rent": 0
+            "rent": 1400
           },
           {
-            "rent": 0
+            "rent": 1700
           },
           {
-            "rent": 0
+            "rent": 2000
           }
         ],
-        "mortgage": 0,
-        "cost_house": 0,
-        "cost_hotel": 0
+        "mortgage": 200,
+        "cost_house": 200,
+        "cost_hotel": 200
       }
     }
   ]
