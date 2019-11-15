@@ -2,63 +2,63 @@
   "textures": "chest/chest",
   "cards": [
     {
-      "text": "0",
+      "text": "Advance to Go(Collect $200)",
       "advance": 0
     },
     {
-      "text": "0",
+      "text": "Bank error in your favor - Collect $200",
       "get": 200
     },
     {
-      "text": "0",
+      "text": "Doctor's fee - Pay $50",
       "pay": 50
     },
     {
-      "text": "0",
+      "text": "From sale of stock you get $50",
       "get": 50
     },
     {
-      "text": "0",
+      "text": "Get Out of Jail Free",
       "freeJail": true
     },
     {
-      "text": "0",
+      "text": "Go to Jail - Go directly to jail - Do not pass Go - Do not collect $200",
       "move": 11
     },
     {
-      "text": "0",
+      "text": "Grand Opera Night - Collect $50 from ever player for opening night seats",
       "collect": 50
     },
     {
-      "text": "0",
+      "text": "Holiday Fund matures - Receive $100",
       "get": 100
     },
     {
-      "text": "0",
+      "text": "Income tax refund - Collect $20",
       "get": 20
     },
     {
-      "text": "0",
+      "text": "It is your birthday - Collect $10",
       "collect": 10
     },
     {
-      "text": "0",
+      "text": "Life insurance matures - Collect $100",
       "get": 100
     },
     {
-      "text": "0",
+      "text": "Pay hospital fees of $100",
       "pay": 50
     },
     {
-      "text": "0",
+      "text": "Pay school fees of $150",
       "pay": 50
     },
     {
-      "text": "0",
+      "text": "Receive $25 consultancy fee",
       "get": 25
     },
     {
-      "text": "0",
+      "text": "You are assessed for street repairs - $40 per house - $115 per hotel",
       "repairs": [
         {
           "house": 40,
@@ -67,11 +67,11 @@
       ]
     },
     {
-      "text": "0",
+      "text": "You have won second prize in a beauty contest - Collect $10",
       "get": 10
     },
     {
-      "text": "0",
+      "text": "You inherit $100",
       "get": 100
     }
   ]
