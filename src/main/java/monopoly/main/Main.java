@@ -1,4 +1,7 @@
-package main;
+package monopoly.main;
+
+import engine.GameEngine;
+import engine.IGameLogic;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package main;
+package engine;
 
 import org.lwjgl.opengl.GL;
 
@@ -43,5 +43,13 @@ public class Window {
 
     public long getId() {
         return id;
+    }
+
+    public int getWidth() {
+        return this.width;
+    }
+
+    public int getHeight() {
+        return this.height;
     }
 }
