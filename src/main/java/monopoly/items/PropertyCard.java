@@ -4,8 +4,10 @@ import monopoly.enums.PropertyType;
 import monopoly.inventory.ITradable;
 import monopoly.inventory.Inventory;
 import monopoly.board.tiles.TileProperty;
+import monopoly.rendering.Mesh;
+import monopoly.rendering.RenderableObject;
 
-public class PropertyCard implements ITradable {
+public class PropertyCard extends RenderableObject implements ITradable {
 
     private TileProperty property;
 
@@ -14,7 +16,8 @@ public class PropertyCard implements ITradable {
     private final String name;
     private final int[] costs;
 
-    public PropertyCard(String name, PropertyType type, int[] costs) {
+    public PropertyCard(String name, PropertyType type, int[] costs, Mesh mesh) {
+        super(mesh);
         this.name = name;
         this.costs = costs;
         this.type = type;

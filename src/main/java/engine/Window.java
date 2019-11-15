@@ -4,6 +4,7 @@ import org.lwjgl.opengl.GL;
 
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.system.MemoryUtil.*;
+import static org.lwjgl.opengl.GL30.*;
 
 public class Window {
     private long id;
@@ -37,6 +38,8 @@ public class Window {
             glfwSwapInterval(1);
         }
         GL.createCapabilities();
+
+        glEnable(GL_DEPTH_TEST);
 
         return this;
     }

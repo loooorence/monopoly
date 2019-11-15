@@ -1,15 +1,17 @@
 package monopoly.board;
 
 import monopoly.Player;
-import monopoly.rendering.IRenderable;
+import monopoly.rendering.Mesh;
+import monopoly.rendering.RenderableObject;
 import monopoly.util.CircularlyLinkedList;
 
-public class Board implements IRenderable{
+public class Board extends RenderableObject {
 
     private final CircularlyLinkedList<Tile> tileList;
 
-    public Board() {
-        this.tileList = new CircularlyLinkedList();
+    public Board(Mesh mesh) {
+        super(mesh);
+        this.tileList = new CircularlyLinkedList<>();
         initBoard();
     }
 

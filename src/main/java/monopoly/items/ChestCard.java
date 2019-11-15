@@ -2,11 +2,12 @@ package monopoly.items;
 
 import monopoly.Player;
 import monopoly.enums.CardAction;
+import monopoly.rendering.Mesh;
 
 public class ChestCard extends DrawableCard {
 
-    public ChestCard(String text, String texture, CardAction action, int[] values) {
-        super(text, texture, action, values);
+    public ChestCard(String text, Mesh mesh, CardAction action, int[] values) {
+        super(text, mesh, action, values);
     }
 
     @Override

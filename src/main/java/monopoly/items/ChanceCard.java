@@ -2,11 +2,12 @@ package monopoly.items;
 
 import monopoly.Player;
 import monopoly.enums.CardAction;
+import monopoly.rendering.Mesh;
 
 public class ChanceCard extends DrawableCard {
 
-    public ChanceCard(String text, String texture, CardAction action, int[] values) {
-        super(text, texture, action, values);
+    public ChanceCard(String text, Mesh mesh, CardAction action, int[] values) {
+        super(text, mesh, action, values);
     }
 
     @Override

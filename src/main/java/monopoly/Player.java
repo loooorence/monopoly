@@ -1,10 +1,11 @@
 package monopoly;
 
+import monopoly.inventory.Inventory;
 import monopoly.inventory.InventoryHolder;
 import monopoly.board.Tile;
-import monopoly.rendering.IRenderable;
+import monopoly.rendering.Mesh;
 
-public class Player extends InventoryHolder implements IRenderable {
+public class Player extends InventoryHolder {
 
     private Tile renderLocation;
     private Tile advanceTile;
@@ -15,8 +16,9 @@ public class Player extends InventoryHolder implements IRenderable {
 
     private Banker banker;
 
-    public Player(String name, String texture) {
-        super(name,texture);
+    public Player(String name, Mesh mesh) {
+        super(name,mesh);
+        this.inventory = new Inventory(false);
     }
 
     /**

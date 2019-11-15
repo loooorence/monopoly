@@ -3,13 +3,16 @@ package monopoly.items;
 import monopoly.enums.Denomination;
 import monopoly.inventory.ITradable;
 import monopoly.inventory.Inventory;
+import monopoly.rendering.Mesh;
+import monopoly.rendering.RenderableObject;
 
-public class BillStack implements ITradable {
+public class BillStack extends RenderableObject implements ITradable {
     private int amount;
     private int value;
     private final Denomination denomination;
     
-    public BillStack(Denomination denomination, int amount) {
+    public BillStack(Denomination denomination, int amount, Mesh mesh) {
+        super(mesh);
         this.denomination = denomination;
         this.amount = amount;
         this.value = denomination.getValue();
