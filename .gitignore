@@ -25,6 +25,7 @@
 hs_err_pid*
 
 .idea/$PRODUCT_WORKSPACE_FILE$
-hs_err_pid16120.log
 src/test/
 target/
+!/.idea/
+!/.idea/compiler.xml
