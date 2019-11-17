@@ -73,7 +73,7 @@ public class GameEngine{
                 accumulator -= interval;
             }
 
-            alpha = accumulator / interval;
+            alpha = delta / interval;
 
             gameLogic.render(alpha);
         }

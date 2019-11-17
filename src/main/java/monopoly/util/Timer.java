@@ -1,17 +1,19 @@
 package monopoly.util;
 
-import static org.lwjgl.glfw.GLFW.glfwGetTime;
-
 public class Timer {
 
     private double lastTime;
 
     public void init() {
-        lastTime = glfwGetTime();
+        lastTime = getTime();
+    }
+
+    public double getTime() {
+        return System.nanoTime() / 1E9;
     }
 
     public double getDeltaTime() {
-        double currentTime = glfwGetTime();
+        double currentTime = getTime();
         double deltaTime = currentTime - lastTime;
         lastTime = currentTime;
         return deltaTime;
