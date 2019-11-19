@@ -53,13 +53,25 @@ public class RenderableObject {
         }
     }
 
+    public boolean isMoving() {
+        return this.targetPosition != null;
+    }
+
+    public boolean isScaling() {
+        return this.targetScale != this.scale;
+    }
+
+    public boolean isRotating() {
+        return this.targetRotation != null;
+    }
+
     private void fixRotation() {
         for (int i = 0; i < 3; i++) {
-            float currentR = rotation.get(i);
-            if (currentR >= 360 || currentR < 0) {
-                float changeR = currentR - (currentR % 360);
-                rotation.set(i, currentR - changeR);
+            float rotationFix = rotation.get(i) % 360;
+            if (rotationFix < 0) {
+                rotationFix += 360;
             }
+            rotation.set(i, rotationFix);
         }
     }
 
