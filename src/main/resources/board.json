@@ -14,6 +14,7 @@
       "texture": "tiles\\A1",
       "property": {
         "group": 2,
+        "cost": 60,
         "rents": [
           {
             "rent": 2
@@ -52,6 +53,7 @@
       "texture": "tiles\\A2",
       "property": {
         "group": 2,
+        "cost": 60,
         "rents": [
           {
             "rent": 4
@@ -82,7 +84,7 @@
       "orientation": "NORTH",
       "title": "Income Tax",
       "texture": "tiles\\tileTax1",
-      "extra": 0
+      "extra": 200
     },
     {
       "type": "TileProperty",
@@ -91,6 +93,7 @@
       "texture": "tiles\\R1",
       "property": {
         "group": 0,
+        "cost": 200,
         "rents": [
           {
             "rent": 25
@@ -114,6 +117,7 @@
       "texture": "tiles\\B1",
       "property": {
         "group": 3,
+        "cost": 100,
         "rents": [
           {
             "rent": 6
@@ -152,6 +156,7 @@
       "texture": "tiles\\B2",
       "property": {
         "group": 3,
+        "cost": 100,
         "rents": [
           {
             "rent": 6
@@ -184,6 +189,7 @@
       "texture": "tiles\\B3",
       "property": {
         "group": 3,
+        "cost": 120,
         "rents": [
           {
             "rent": 8
@@ -229,6 +235,7 @@
       "texture": "tiles\\C1",
       "property": {
         "group": 4,
+        "cost": 140,
         "rents": [
           {
             "rent": 10
@@ -261,6 +268,7 @@
       "texture": "tiles\\U1",
       "property": {
         "group": 1,
+        "cost": 150,
         "mult1": 4,
         "mult2": 10
       }
@@ -272,6 +280,7 @@
       "texture": "tiles\\C2",
       "property": {
         "group": 4,
+        "cost": 140,
         "rents": [
           {
             "rent": 10
@@ -304,6 +313,7 @@
       "texture": "tiles\\C3",
       "property": {
         "group": 4,
+        "cost": 160,
         "rents": [
           {
             "rent": 12
@@ -336,6 +346,7 @@
       "texture": "tiles\\R2",
       "property": {
         "group": 0,
+        "cost": 200,
         "rents": [
           {
             "rent": 25
@@ -359,6 +370,7 @@
       "texture": "tiles\\D1",
       "property": {
         "group": 5,
+        "cost": 180,
         "rents": [
           {
             "rent": 14
@@ -397,6 +409,7 @@
       "texture": "tiles\\D2",
       "property": {
         "group": 5,
+        "cost": 180,
         "rents": [
           {
             "rent": 14
@@ -429,6 +442,7 @@
       "texture": "tiles\\D3",
       "property": {
         "group": 5,
+        "cost": 200,
         "rents": [
           {
             "rent": 16
@@ -467,6 +481,7 @@
       "texture": "tiles\\E1",
       "property": {
         "group": 6,
+        "cost": 220,
         "rents": [
           {
             "rent": 18
@@ -505,6 +520,7 @@
       "texture": "tiles\\E2",
       "property": {
         "group": 6,
+        "cost": 220,
         "rents": [
           {
             "rent": 18
@@ -537,6 +553,7 @@
       "texture": "tiles\\E3",
       "property": {
         "group": 6,
+        "cost": 240,
         "rents": [
           {
             "rent": 20
@@ -569,6 +586,7 @@
       "texture": "tiles\\R3",
       "property": {
         "group": 0,
+        "cost": 200,
         "rents": [
           {
             "rent": 25
@@ -592,6 +610,7 @@
       "texture": "tiles\\F1",
       "property": {
         "group": 7,
+        "cost": 260,
         "rents": [
           {
             "rent": 22
@@ -620,10 +639,11 @@
     {
       "type": "TileProperty",
       "orientation": "SOUTH",
-      "title": "VETNOR AVENUE",
+      "title": "VENTNOR AVENUE",
       "texture": "tiles\\F2",
       "property": {
         "group": 7,
+        "cost": 260,
         "rents": [
           {
             "rent": 22
@@ -656,6 +676,7 @@
       "texture": "tiles\\U2",
       "property": {
         "group": 1,
+        "cost": 150,
         "mult1": 4,
         "mult2": 10
       }
@@ -667,6 +688,7 @@
       "texture": "tiles\\F3",
       "property": {
         "group": 7,
+        "cost": 280,
         "rents": [
           {
             "rent": 24
@@ -705,6 +727,7 @@
       "texture": "tiles\\G1",
       "property": {
         "group": 8,
+        "cost": 300,
         "rents": [
           {
             "rent": 26
@@ -737,6 +760,7 @@
       "texture": "tiles\\G2",
       "property": {
         "group": 8,
+        "cost": 300,
         "rents": [
           {
             "rent": 26
@@ -775,6 +799,7 @@
       "texture": "tiles\\G3",
       "property": {
         "group": 8,
+        "cost": 320,
         "rents": [
           {
             "rent": 28
@@ -807,6 +832,7 @@
       "texture": "tiles\\R4",
       "property": {
         "group": 0,
+        "cost": 200,
         "rents": [
           {
             "rent": 25
@@ -836,6 +862,7 @@
       "texture": "tiles\\H1",
       "property": {
         "group": 9,
+        "cost": 350,
         "rents": [
           {
             "rent": 35
@@ -866,7 +893,7 @@
       "orientation": "WEST",
       "title": "Luxury Tax",
       "texture": "tiles\\tileTax2",
-      "extra": 0
+      "extra": 100
     },
     {
       "type": "TileProperty",
@@ -875,6 +902,7 @@
       "texture": "tiles\\H2",
       "property": {
         "group": 9,
+        "cost": 400,
         "rents": [
           {
             "rent": 50
