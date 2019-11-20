@@ -3,6 +3,7 @@ package monopoly.board.tiles;
 import monopoly.Player;
 import monopoly.board.Tile;
 import monopoly.items.PropertyCard;
+import monopoly.rendering.Mesh;
 
 public class TileProperty extends Tile {
 
@@ -12,8 +13,8 @@ public class TileProperty extends Tile {
     private boolean hasHotel;
     private final int price;
 
-    protected TileProperty(String title, String texture, PropertyCard card) {
-        super(title, texture);
+    public TileProperty(String title, Mesh mesh, PropertyCard card) {
+        super(title, mesh);
         this.card = card;
         this.price = -1;
         this.houseCount = 0;

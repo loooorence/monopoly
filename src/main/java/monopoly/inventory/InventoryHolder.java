@@ -1,14 +1,16 @@
 package monopoly.inventory;
 
-public abstract class InventoryHolder {
+import monopoly.rendering.Mesh;
+import monopoly.rendering.RenderableObject;
+
+public abstract class InventoryHolder extends RenderableObject {
 
     protected Inventory inventory;
     protected String name;
-    protected String texture;
 
-    protected InventoryHolder(String name, String texture) {
+    protected InventoryHolder(String name, Mesh mesh) {
+        super(mesh);
         this.name = name;
-        this.texture = texture;
     }
 
     public String getName() {

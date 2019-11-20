@@ -2,18 +2,21 @@ package monopoly.board;
 
 import monopoly.Player;
 import monopoly.enums.RenderOrientation;
-import monopoly.rendering.IRenderable;
-import monopoly.util.Stack;
+import monopoly.rendering.Mesh;
+import monopoly.rendering.RenderableObject;
 
-public abstract class Tile implements IRenderable {
+public abstract class Tile extends RenderableObject {
 
     private String title;
-    private String texture;
     private RenderOrientation renderOrientation;
 
-    protected Tile(String title, String texture) {
+    protected Tile(String title, Mesh mesh) {
+        super(mesh);
         this.title = title;
-        this.texture = texture;
+    }
+
+    public String getTitle() {
+        return this.title;
     }
     
     public abstract void onLanded(Player player);

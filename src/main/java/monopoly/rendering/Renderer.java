@@ -3,6 +3,7 @@ package monopoly.rendering;
 import engine.Window;
 import monopoly.util.Resources;
 import org.joml.Matrix4f;
+import org.joml.Vector3f;
 
 import static org.lwjgl.opengl.GL30.*;
 
@@ -13,13 +14,18 @@ public class Renderer {
     private Window window;
 
     private float[] vertices;
-    private float[] colors;
+    private float[] textures;
     private int[] indices;
 
-    private Matrix4f projectionMatrix;
+    private Camera camera;
+
+    private Transformation transformation;
+
     private static final float FOV = (float) Math.toRadians(60.0f);
     private static final float Z_NEAR = 0.01f;
     private static final float Z_FAR = 1000.0f;
+
+    private RenderableObject[] objects;
 
     private Mesh mesh;
 
@@ -27,24 +33,8 @@ public class Renderer {
         this.window = window;
 
         float aspectRatio = (float) window.getWidth() / window.getHeight();
-        projectionMatrix = new Matrix4f().perspective(FOV, aspectRatio, Z_NEAR, Z_FAR);
 
-        vertices = new float[]{
-            -0.5f, +0.5f, -2.0f,
-            -0.5f, -0.5f, -2.0f,
-            +0.5f, -0.5f, -2.0f,
-            +0.5f, +0.5f, -2.0f,
-        };
-        colors = new float[]{
-            +1.0f, +1.0f, +0.0f,
-            +1.0f, +0.0f, +1.0f,
-            +1.0f, +1.0f, +0.0f,
-            +1.0f, +0.0f, +1.0f
-        };
-        indices = new int[]{
-          0, 1, 3,
-          3, 1, 2
-        };
+        transformation = new Transformation();
     }
 
     public void init() throws Exception {
@@ -55,27 +45,35 @@ public class Renderer {
         shaderProgram.createFragmentShader(Resources.loadResource("/shaders/fragment.fs"));
         shaderProgram.link();
         shaderProgram.createUniform("projectionMatrix");
+        shaderProgram.createUniform("modelViewMatrix");
+        shaderProgram.createUniform("texture_sampler");
 
-        mesh = new Mesh(vertices, indices, colors);
+        camera = new Camera(new Vector3f(0,0,0), new Vector3f(0,0,0));
+        camera.moveObjectToTarget(10, 10, 6, 0.01f);
     }
 
-    public void render(double alpha) {
+    public void render(double alpha, RenderableObject[] objects) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         shaderProgram.bind();
+
+        Matrix4f projectionMatrix = transformation.getProjectionMatrix(FOV, window.getWidth(), window.getHeight(), Z_NEAR, Z_FAR);
         shaderProgram.setUniform("projectionMatrix", projectionMatrix);
 
-        glBindVertexArray(mesh.getVaoId());
-        glEnableVertexAttribArray(0);
-        glEnableVertexAttribArray(1);
+        camera.updateTransformations((float)alpha);
+        camera.pointAt(0, 0, -3);
+        Matrix4f viewMatrix = transformation.getViewMatrix(camera);
 
-        glDrawElements(GL_TRIANGLES, mesh.getVertexCount(), GL_UNSIGNED_INT, 0);
+        shaderProgram.setUniform("texture_sampler", 0);
 
-        glDisableVertexAttribArray(1);
-        glDisableVertexAttribArray(0);
+        for (RenderableObject objectToRender : objects) {
+            objectToRender.updateTransformations((float)alpha);
 
-        glBindVertexArray(0);
+            Matrix4f modelViewMatrix = transformation.getModelViewMatrix(objectToRender, viewMatrix);
+            shaderProgram.setUniform("modelViewMatrix", modelViewMatrix);
 
+            objectToRender.getMesh().render();
+        }
         shaderProgram.unbind();
     }
 
@@ -83,6 +81,5 @@ public class Renderer {
         if (shaderProgram != null) {
             shaderProgram.cleanup();
         }
-        mesh.cleanup();
     }
 }

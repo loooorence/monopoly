@@ -2,17 +2,17 @@ package monopoly.items;
 
 import monopoly.Player;
 import monopoly.enums.CardAction;
-import monopoly.rendering.IRenderable;
+import monopoly.rendering.Mesh;
+import monopoly.rendering.RenderableObject;
 
-public abstract class DrawableCard implements IRenderable {
+public abstract class DrawableCard extends RenderableObject {
     protected final String text;
-    private final String texture;
     private final CardAction action;
     private final int[] values;
 
-    DrawableCard(String text, String texture, CardAction action, int[] values) {
+    DrawableCard(String text, Mesh mesh, CardAction action, int[] values) {
+        super(mesh);
         this.text = text;
-        this.texture = texture;
         this.action = action;
         this.values = values;
     }

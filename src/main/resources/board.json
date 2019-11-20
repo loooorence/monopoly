@@ -5,7 +5,7 @@
       "orientation": "NORTH_WEST",
       "title": "GO",
       "texture": "tiles\\tileGo",
-      "reward": 200
+      "extra": 200
     },
     {
       "type": "TileProperty",
@@ -82,7 +82,7 @@
       "orientation": "NORTH",
       "title": "Income Tax",
       "texture": "tiles\\tileTax1",
-      "tax": 0
+      "extra": 0
     },
     {
       "type": "TileProperty",
@@ -220,7 +220,7 @@
       "orientation": "NORTH_EAST",
       "title": "In Jail",
       "texture": "tiles\\tileJail",
-      "jailTurns": 3
+      "extra": 3
     },
     {
       "type": "TileProperty",
@@ -866,7 +866,7 @@
       "orientation": "WEST",
       "title": "Luxury Tax",
       "texture": "tiles\\tileTax2",
-      "tax": 0
+      "extra": 0
     },
     {
       "type": "TileProperty",
