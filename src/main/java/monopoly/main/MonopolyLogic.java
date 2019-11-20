@@ -2,6 +2,7 @@ package monopoly.main;
 
 import engine.IGameLogic;
 import engine.Window;
+import monopoly.board.Board;
 import monopoly.rendering.Mesh;
 import monopoly.rendering.RenderableObject;
 import monopoly.rendering.Renderer;
@@ -22,6 +23,7 @@ public class MonopolyLogic implements IGameLogic {
         renderer = new Renderer(window);
         renderer.init();
         initObjects();
+        Board board = new Board(null);
     }
 
     public void initObjects() throws Exception {

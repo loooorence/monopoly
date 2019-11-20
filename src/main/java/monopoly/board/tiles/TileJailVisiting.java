@@ -7,7 +7,7 @@ import monopoly.rendering.Mesh;
 
 public class TileJailVisiting extends Tile implements IPassable {
 
-    protected TileJailVisiting(String title, Mesh mesh) {
+    public TileJailVisiting(String title, Mesh mesh) {
         super(title, mesh);
     }
 

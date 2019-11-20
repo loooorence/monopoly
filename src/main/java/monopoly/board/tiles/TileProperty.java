@@ -13,7 +13,7 @@ public class TileProperty extends Tile {
     private boolean hasHotel;
     private final int price;
 
-    protected TileProperty(String title, Mesh mesh, PropertyCard card) {
+    public TileProperty(String title, Mesh mesh, PropertyCard card) {
         super(title, mesh);
         this.card = card;
         this.price = -1;

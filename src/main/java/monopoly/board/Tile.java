@@ -14,6 +14,10 @@ public abstract class Tile extends RenderableObject {
         super(mesh);
         this.title = title;
     }
+
+    public String getTitle() {
+        return this.title;
+    }
     
     public abstract void onLanded(Player player);
 

@@ -6,7 +6,7 @@ import monopoly.rendering.Mesh;
 
 public class TileChance extends Tile {
 
-    protected TileChance(String title, Mesh mesh) {
+    public TileChance(String title, Mesh mesh) {
         super(title, mesh);
     }
 

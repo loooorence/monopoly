@@ -8,7 +8,7 @@ public class TileTax extends Tile {
 
     private int taxAmount;
 
-    protected TileTax(String title, Mesh mesh, int taxAmount) {
+    public TileTax(String title, Mesh mesh, int taxAmount) {
         super(title, mesh);
         this.taxAmount = taxAmount;
     }

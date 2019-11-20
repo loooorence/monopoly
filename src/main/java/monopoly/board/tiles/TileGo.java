@@ -9,7 +9,7 @@ public class TileGo extends Tile implements IPassable {
 
     private int rewardAmount;
 
-    protected TileGo(String title, Mesh mesh, int rewardAmount) {
+    public TileGo(String title, Mesh mesh, int rewardAmount) {
         super(title, mesh);
         this.rewardAmount = rewardAmount;
     }
