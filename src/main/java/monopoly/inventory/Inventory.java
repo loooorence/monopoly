@@ -11,8 +11,8 @@ public class Inventory {
     private ArrayList<PropertyCard> properties;
     private HashMap<Denomination, BillStack> moneyMap;
     
-    public Inventory(boolean isBanker) {
-        // TODO: initialize property list
+    public Inventory(ArrayList<PropertyCard> properties, boolean isBanker) {
+       this.properties = properties;
         // TODO: initialize money HashMap using Denomination enum
     }
 
@@ -42,6 +42,7 @@ public class Inventory {
     public boolean sendMoney(Inventory invToSendTo, int amount, boolean isChange) {
         // TODO: implement sending money
         // calculate amount of each denomination, then use trade method on each BillStack that needs to be changed
+
         // return true if money was able to be sent, false otherwise
         return false;
     }
