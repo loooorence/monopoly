@@ -51,8 +51,6 @@ public class Board extends RenderableObject {
                     newTile = (Tile) c.newInstance(tileObject.getString("title"), null, value);
                 }
             }
-
-            System.out.println(newTile.getTitle());
         }
     }
 

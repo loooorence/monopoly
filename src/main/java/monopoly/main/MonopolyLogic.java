@@ -3,11 +3,14 @@ package monopoly.main;
 import engine.IGameLogic;
 import engine.Window;
 import monopoly.board.Board;
-import monopoly.rendering.Mesh;
-import monopoly.rendering.RenderableObject;
-import monopoly.rendering.Renderer;
-import monopoly.rendering.Texture;
+import monopoly.rendering.*;
+import monopoly.states.BoardState;
+import monopoly.states.IState;
+import monopoly.states.PlayerState;
+import monopoly.states.StateNull;
 import monopoly.util.Resources;
+import monopoly.util.Stack;
+import org.joml.Vector3f;
 
 import static org.lwjgl.glfw.GLFW.*;
 
@@ -15,7 +18,12 @@ public class MonopolyLogic implements IGameLogic {
 
     private Renderer renderer;
     private Window window;
+    private Scene scene;
     private RenderableObject[] objects;
+
+    private Stack<IState> stateStack;
+
+    private Camera camera;
 
     @Override
     public void init(Window window) throws Exception {
@@ -24,115 +32,89 @@ public class MonopolyLogic implements IGameLogic {
         renderer.init();
         initObjects();
         Board board = new Board(null);
+        stateStack = new Stack<>();
+        stateStack.push(new StateNull());
+        stateStack.peek().beginState();
+
+        scene = new Scene();
+        SceneLight sceneLight = new SceneLight();
+
+        PointLight[] pointLights = new PointLight[2];
+
+        pointLights[0] = new PointLight(new Vector3f(1,1,1), new Vector3f(0,3,-5), 0.0f);
+        pointLights[0].setAttenuation(new PointLight.Attenuation(0f, 0f, 1f));
+        pointLights[1] = new PointLight(new Vector3f(1, 1, 1), new Vector3f(0, 5.5f, -2), 0.0f);
+        pointLights[1].setAttenuation(new PointLight.Attenuation(0f, 0f, 1f));
+        sceneLight.setPointLights(pointLights);
+
+        Vector3f ambientLight = new Vector3f(0.3f, 0.3f, 0.3f);
+        sceneLight.setAmbientLight(ambientLight);
+
+        DirectionalLight directionalLight = new DirectionalLight(new Vector3f(1, 1, 1), new Vector3f(0, 1, 0), 0.5f);
+        sceneLight.setDirectionalLight(directionalLight);
+
+        SpotLight[] spotLights = new SpotLight[1];
+        PointLight pointLightSL = new PointLight(new Vector3f(1,1,1), new Vector3f(0,5,0), 0f);
+        pointLightSL.setAttenuation(new PointLight.Attenuation(0, 0, 0.02f));
+        spotLights[0] = new SpotLight(pointLightSL, new Vector3f(0,0.45f,-1), 20);
+        sceneLight.setSpotLights(spotLights);
+
+        scene.setSceneLight(sceneLight);
+        scene.setRenderObjects(objects);
+
+        camera = new Camera(new Vector3f(0,3,2), new Vector3f(0,0,0));
+        camera.pointAt(0, 0, -5);
     }
 
     public void initObjects() throws Exception {
-        float[] vertices = new float[]{
-                //front
-                -0.5f, +0.5f, +0.5f, // 0-0
-                -0.5f, -0.5f, +0.5f, // 1-1
-                +0.5f, -0.5f, +0.5f, // 2-2
-                +0.5f, +0.5f, +0.5f, // 3-3
-                //back
-                -0.5f, +0.5f, -0.5f, // 4-4
-                +0.5f, +0.5f, -0.5f, // 5-5
-                -0.5f, -0.5f, -0.5f, // 6-6
-                +0.5f, -0.5f, -0.5f, // 7-7
-                //right
-                +0.5f, +0.5f, +0.5f, // 3-8
-                +0.5f, +0.5f, -0.5f, // 5-9
-                +0.5f, -0.5f, +0.5f, // 2-10
-                +0.5f, -0.5f, -0.5f, // 7-11
-                //left
-                -0.5f, +0.5f, -0.5f, // 4-12
-                -0.5f, +0.5f, +0.5f, // 0-13
-                -0.5f, -0.5f, -0.5f, // 6-14
-                -0.5f, -0.5f, +0.5f, // 1-15
-                //bottom
-                -0.5f, -0.5f, +0.5f, // 1-16
-                +0.5f, -0.5f, +0.5f, // 2-17
-                -0.5f, -0.5f, -0.5f, // 6-18
-                +0.5f, -0.5f, -0.5f, // 7-19
-                //top
-                -0.5f, +0.5f, -0.5f, // 4-20
-                +0.5f, +0.5f, -0.5f, // 5-21
-                -0.5f, +0.5f, +0.5f, // 0-22
-                +0.5f, +0.5f, +0.5f, // 3-23
-        };
-        float[] textures = new float[]{
-                //front
-                0.00f, 0.00f,
-                0.00f, 0.33f,
-                0.50f, 0.33f,
-                0.50f, 0.00f,
-                //back
-                1.00f, 0.00f,
-                0.50f, 0.00f,
-                1.00f, 0.33f,
-                0.50f, 0.33f,
-                //right
-                0.00f, 0.33f,
-                0.50f, 0.33f,
-                0.00f, 0.66f,
-                0.50f, 0.66f,
-                //left
-                0.50f, 0.33f,
-                1.00f, 0.33f,
-                0.50f, 0.66f,
-                1.00f, 0.66f,
-                //bottom
-                0.00f, 0.66f,
-                0.50f, 0.66f,
-                0.00f, 1.00f,
-                0.50f, 1.00f,
-                //top
-                0.50f, 0.66f,
-                1.00f, 0.66f,
-                0.50f, 1.00f,
-                1.00f, 1.00f
-        };
-        int[] indices = new int[]{
-                0,  1,  3,  3,  1,  2,
-                4,  5,  6,  5,  7,  6,
-                9, 10, 11,  9,  8, 10,
-                13, 14, 15, 13, 12, 14,
-                17, 18, 19, 17, 16, 18,
-                21, 22, 23, 21, 20, 22
-        };
+        Mesh[] meshes = StaticMeshesLoader.load(Resources.getResourcePath("/models/house/house.obj"), "");
 
-        Texture texture = new Texture(Resources.getResourcePath("/textures/dice-texture.jpg"));
-        Mesh mesh = new Mesh(vertices, indices, textures, texture);
-
-        objects = new RenderableObject[2];
-        objects[0] = new RenderableObject(mesh);
-        objects[0].setPosition(-1f, 0, -3);
-        objects[0].rotateObjectToTarget(720, 0, 0, 6);
-
-        objects[1] = new RenderableObject(mesh);
-        objects[1].setPosition(1f, 0, -3);
-        objects[1].rotateObjectToTarget(-720, 0, 0, 6);
+        objects = new RenderableObject[1];
+        objects[0] = new RenderableObject(meshes);
+        objects[0].setPosition(0, 0, -5);
+        objects[0].setRotation(0, 90, 0);
     }
 
     @Override
     public void inputKeyboard(int key, int scancode, int action, int mods) {
-        if (key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE) {
-            glfwSetWindowShouldClose(window.getId(), true);
+        IState currentState = stateStack.peek();
+        if (currentState instanceof PlayerState) {
+            ((PlayerState) currentState).inputKeyboard(key, scancode, action, mods);
         }
     }
 
     @Override
-    public void inputMouseButton(int button, int action, int mods) {
-
+    public void inputMouseButton(int button, int action, int mods, float xPos, float yPos) {
+        IState currentState = stateStack.peek();
+        if (currentState instanceof PlayerState) {
+            ((PlayerState) currentState).inputMouse(button, action, mods, xPos, yPos);
+        }
     }
 
     @Override
     public void update() {
-
+        IState currentState = stateStack.peek();
+        IState nextState = currentState.update();
+        if (nextState == null) {
+            stateStack.pop();
+        } else {
+            if (!currentState.equals(nextState)) {
+                if (!nextState.isStacked()) {
+                    stateStack.pop();
+                }
+                stateStack.push(nextState);
+                nextState.beginState();
+            }
+        }
     }
 
     @Override
     public void render(double alpha) {
-        renderer.render(alpha, objects);
+        IState currentState = stateStack.peek();
+        if (currentState instanceof BoardState) {
+            ((BoardState) currentState).renderUpdate((float)alpha);
+        }
+        renderer.render(alpha, scene, camera);
         glfwSwapBuffers(window.getId());
     }
 
