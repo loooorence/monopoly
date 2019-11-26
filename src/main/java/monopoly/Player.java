@@ -7,11 +7,12 @@ import monopoly.rendering.Mesh;
 
 public class Player extends InventoryHolder {
 
+    public static final float MOVEMENT_SPEED = 0.05f;
+
     private Tile renderLocation;
     private Tile advanceTile;
     private Tile moveTile;
 
-    private String boardMarker;
     private int spacesToMove;
 
     private Banker banker;
