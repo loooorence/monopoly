@@ -5,6 +5,8 @@ import monopoly.inventory.InventoryHolder;
 import monopoly.board.Tile;
 import monopoly.rendering.Mesh;
 
+import java.util.ArrayList;
+
 public class Player extends InventoryHolder {
 
     public static final float MOVEMENT_SPEED = 0.05f;
@@ -19,7 +21,7 @@ public class Player extends InventoryHolder {
 
     public Player(String name, Mesh mesh) {
         super(name,mesh);
-        this.inventory = new Inventory(false);
+        this.inventory = new Inventory(new ArrayList<>(), false);
     }
 
     /**
