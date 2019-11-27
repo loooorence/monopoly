@@ -60,5 +60,10 @@ public class Player extends InventoryHolder {
         return this.banker;
     }
 
+    public void getMoney(int amount) {
+        getBanker().getInventory().getCashStack().trade(this.getInventory(), amount);
+    }
+
+
 
 }

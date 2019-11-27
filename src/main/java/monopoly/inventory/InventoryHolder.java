@@ -20,4 +20,11 @@ public abstract class InventoryHolder extends RenderableObject {
     public Inventory getInventory() {
         return inventory;
     }
+
+    public void payMoney(InventoryHolder target, int amount) {
+        this.getInventory().getCashStack().trade(target.getInventory(), amount);
+    }
+
+
+
 }
