@@ -1,5 +1,6 @@
 package monopoly.items;
 
+import monopoly.board.Tile;
 import monopoly.enums.PropertyType;
 import monopoly.inventory.ITradable;
 import monopoly.inventory.Inventory;
@@ -21,6 +22,10 @@ public class PropertyCard extends RenderableObject implements ITradable {
         this.name = name;
         this.costs = costs;
         this.type = type;
+    }
+
+    public void setProperty(Tile tile) {
+        this.property = (TileProperty)tile;
     }
 
     @Override
