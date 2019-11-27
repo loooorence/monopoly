@@ -15,8 +15,4 @@ public class TileChest extends Tile {
 
     }
 
-    @Override
-    public void renderMarker() {
-
-    }
 }
