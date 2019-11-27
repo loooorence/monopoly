@@ -13,6 +13,8 @@ public class ChanceCard extends DrawableCard {
     @Override
     public void onDraw(Player player) {
         //TODO: implement chance cards
-        // perform tasks based on action and values (see wiki)
+        if (getAction() == CardAction.MOVE) {
+            player.moveSpaces(getValues()[0]);
+        }
     }
 }

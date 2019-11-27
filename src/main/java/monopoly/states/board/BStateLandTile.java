@@ -31,6 +31,6 @@ public class BStateLandTile extends BoardState {
 
     @Override
     public boolean isStacked() {
-        return true;
+        return false;
     }
 }

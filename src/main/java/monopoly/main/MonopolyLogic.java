@@ -62,12 +62,13 @@ public class MonopolyLogic implements IGameLogic {
         scene.setSceneLight(sceneLight);
         scene.setRenderObjects(objects);
 
-        camera = new Camera(new Vector3f(0,3,2), new Vector3f(0,0,0));
-        camera.pointAt(0, 0, -5);
+        camera = new Camera(new Vector3f(0,5,2), new Vector3f(0,0,0));
+        camera.moveObjectToTarget(0, 5, -10, 0.1f);
+        camera.pointAt(0, 0, 2);
     }
 
     public void initObjects() throws Exception {
-        Mesh[] meshes = StaticMeshesLoader.load(Resources.getResourcePath("/models/board/board5.obj"), "models/board/");
+        Mesh[] meshes = StaticMeshesLoader.load(Resources.getResourcePath("/models/house/house.obj"), "");
 
         objects = new RenderableObject[1];
         objects[0] = new RenderableObject(meshes);
