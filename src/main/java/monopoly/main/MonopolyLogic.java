@@ -67,7 +67,7 @@ public class MonopolyLogic implements IGameLogic {
     }
 
     public void initObjects() throws Exception {
-        Mesh[] meshes = StaticMeshesLoader.load(Resources.getResourcePath("/models/house/house.obj"), "");
+        Mesh[] meshes = StaticMeshesLoader.load(Resources.getResourcePath("/models/board/board5.obj"), "models/board/");
 
         objects = new RenderableObject[1];
         objects[0] = new RenderableObject(meshes);
