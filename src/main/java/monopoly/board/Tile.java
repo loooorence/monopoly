@@ -15,11 +15,18 @@ public abstract class Tile extends RenderableObject {
         this.title = title;
     }
 
+    public void setRenderOrientation(RenderOrientation orientation) {
+        this.renderOrientation = orientation;
+    }
+
+    public RenderOrientation getRenderOrientation() {
+        return renderOrientation;
+    }
+
     public String getTitle() {
         return this.title;
     }
     
     public abstract void onLanded(Player player);
 
-    public abstract void renderMarker();
 }

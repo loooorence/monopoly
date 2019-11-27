@@ -8,42 +8,49 @@ public class Transformation {
 
     private final Matrix4f modelViewMatrix;
 
+    private final Matrix4f modelMatrix;
+
     private final Matrix4f viewMatrix;
 
     public Transformation() {
         modelViewMatrix = new Matrix4f();
         projectionMatrix = new Matrix4f();
+        modelMatrix = new Matrix4f();
         viewMatrix = new Matrix4f();
     }
 
-    public final Matrix4f getProjectionMatrix(float fov, float width, float height, float zNear, float zFar) {
+    public Matrix4f getProjectionMatrix() {
+        return projectionMatrix;
+    }
+
+    public final Matrix4f updateProjectionMatrix(float fov, float width, float height, float zNear, float zFar) {
         float aspectRatio = width / height;
         projectionMatrix.identity();
         projectionMatrix.perspective(fov, aspectRatio, zNear, zFar);
         return projectionMatrix;
     }
 
-    public Matrix4f getModelViewMatrix(RenderableObject renderObject, Matrix4f viewMatrix) {
-        Vector3f objRotation = renderObject.getRotation();
-        modelViewMatrix.identity().
-                translate(renderObject.getPosition()).
-                rotateX((float)Math.toRadians(-objRotation.x)).
-                rotateY((float)Math.toRadians(-objRotation.y)).
-                rotateZ((float)Math.toRadians(-objRotation.z)).
-                scale(renderObject.getScale());
-        return (new Matrix4f(viewMatrix)).mul(modelViewMatrix);
+    public Matrix4f buildModelViewMatrix(RenderableObject renderObject, Matrix4f viewMatrix) {
+        return buildModelViewMatrix(buildModelMatrix(renderObject), viewMatrix);
     }
 
-    public Matrix4f getViewMatrix(Camera camera) {
-        Vector3f cameraPosition = camera.getPosition();
-        Vector3f cameraRotation = camera.getRotation();
+    public Matrix4f buildModelViewMatrix(Matrix4f modelMatrix, Matrix4f viewMatrix) {
+        return viewMatrix.mulAffine(modelMatrix, modelViewMatrix);
+    }
 
-        viewMatrix.identity();
-        viewMatrix.rotate((float)Math.toRadians(cameraRotation.x), new Vector3f(1,0,0));
-        viewMatrix.rotate((float)Math.toRadians(cameraRotation.y), new Vector3f(0,1,0));
-        viewMatrix.translate(-cameraPosition.x, -cameraPosition.y, -cameraPosition.z);
+    public Matrix4f buildModelMatrix(RenderableObject object) {
+        return modelMatrix.translation(object.getPosition()).
+                rotateXYZ(object.getRotation().x, object.getRotation().y, object.getRotation().z).
+                scale(object.getScale());
+    }
 
+    public Matrix4f getViewMatrix() {
         return viewMatrix;
+    }
+
+    public static Matrix4f updateViewMatrix(Vector3f position, Vector3f rotation, Matrix4f viewMatrix) {
+        return viewMatrix.rotationX(rotation.x).rotateY(rotation.y).
+                translate(-position.x, -position.y, -position.z);
     }
 
 }

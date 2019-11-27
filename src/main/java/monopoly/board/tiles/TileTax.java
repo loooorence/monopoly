@@ -18,8 +18,4 @@ public class TileTax extends Tile {
 
     }
 
-    @Override
-    public void renderMarker() {
-
-    }
 }

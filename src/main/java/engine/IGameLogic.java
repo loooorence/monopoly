@@ -5,7 +5,7 @@ public interface IGameLogic {
 
     void inputKeyboard(int key, int scancode, int action, int mods);
 
-    void inputMouseButton(int button, int action, int mods);
+    void inputMouseButton(int button, int action, int mods, float xPos, float yPos);
 
     void update();
 

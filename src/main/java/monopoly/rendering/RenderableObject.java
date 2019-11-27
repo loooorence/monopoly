@@ -4,8 +4,6 @@ import org.joml.Vector3f;
 
 public class RenderableObject {
 
-    private final Mesh mesh;
-
     private final Vector3f position;
     private Vector3f targetPosition;
     private float speedMovement;
@@ -18,16 +16,23 @@ public class RenderableObject {
     private Vector3f targetRotation;
     private float speedRotation;
 
+    private final Mesh[] meshes;
+
     public RenderableObject(Mesh mesh) {
-        this.mesh = mesh;
+        this.meshes = new Mesh[]{mesh};
         this.position = new Vector3f(0,0,0);
         this.scale = 1f;
         this.rotation = new Vector3f(0,0,0);
     }
 
-    public Mesh getMesh() {
-        return this.mesh;
+    public RenderableObject(Mesh[] meshes) {
+        this.meshes = meshes;
+        this.position = new Vector3f(0,0,0);
+        this.scale = 1f;
+        this.rotation = new Vector3f(0,0,0);
     }
+
+    public Mesh[] getMeshes() { return this.meshes; }
 
     public void updateTransformations(float alpha) {
         if (this.targetPosition != null) {
@@ -48,7 +53,6 @@ public class RenderableObject {
             if (updateVector(rotation, targetRotation, alpha, speedRotation)) {
                 this.targetRotation = null;
                 this.speedRotation = 0;
-                fixRotation();
             }
         }
     }
@@ -65,23 +69,19 @@ public class RenderableObject {
         return this.targetRotation != null;
     }
 
-    private void fixRotation() {
-        for (int i = 0; i < 3; i++) {
-            float rotationFix = rotation.get(i) % 360;
-            if (rotationFix < 0) {
-                rotationFix += 360;
-            }
-            rotation.set(i, rotationFix);
-        }
-    }
-
     private boolean updateVector(Vector3f current, Vector3f target, float alpha, float speed) {
         float distance = target.distance(current);
         if (distance <= alpha * speed) {
             current.set(target);
+            if (this instanceof Camera) {
+                ((Camera)this).updateViewMatrix();
+            }
             return true;
         } else {
             current.lerp(target, alpha * (speed / distance));
+            if (this instanceof Camera) {
+                ((Camera)this).updateViewMatrix();
+            }
             return false;
         }
     }
@@ -92,6 +92,9 @@ public class RenderableObject {
 
     public void setPosition(float x, float y, float z) {
         this.position.set(x, y, z);
+        if (this instanceof Camera) {
+            ((Camera)this).updateViewMatrix();
+        }
     }
 
     public void moveObject(float deltaX, float deltaY, float deltaZ) {
@@ -138,34 +141,46 @@ public class RenderableObject {
     }
 
     public void setRotation(float x, float y, float z) {
-        this.rotation.set(x, y, z);
-        fixRotation();
+        this.rotation.set(
+                (float)Math.toRadians(x),
+                (float)Math.toRadians(y),
+                (float)Math.toRadians(z)
+        );
+        if (this instanceof Camera) {
+            ((Camera)this).updateViewMatrix();
+        }
     }
 
     public void rotateObject(float deltaX, float deltaY, float deltaZ) {
         setRotation(
-                this.rotation.x + deltaX,
-                this.rotation.y + deltaY,
-                this.rotation.z + deltaZ)
-        ;
+                (float)Math.toDegrees(this.rotation.x) + deltaX,
+                (float)Math.toDegrees(this.rotation.y) + deltaY,
+                (float)Math.toDegrees(this.rotation.z) + deltaZ
+        );
     }
 
     public void rotateObjectToTarget(float targetX, float targetY, float targetZ, float speed) {
-        this.targetRotation = new Vector3f(targetX, targetY, targetZ);
-        this.speedRotation = speed;
+        this.targetRotation = new Vector3f(
+                (float)Math.toRadians(targetX),
+                (float)Math.toRadians(targetY),
+                (float)Math.toRadians(targetZ)
+        );
+        this.speedRotation = (float)Math.toRadians(speed);
     }
 
     public void rotateObjectWithSpeed(float deltaX, float deltaY, float deltaZ, float speed) {
         rotateObjectToTarget(
-                this.rotation.x + deltaX,
-                this.rotation.y + deltaY,
-                this.rotation.z + deltaZ,
+                (float)Math.toDegrees(this.rotation.x) + deltaX,
+                (float)Math.toDegrees(this.rotation.y) + deltaY,
+                (float)Math.toDegrees(this.rotation.z) + deltaZ,
                 speed
         );
     }
 
     public void cleanup() {
-        mesh.cleanup();
+        for (Mesh mesh : meshes) {
+            mesh.cleanup();
+        }
     }
 
 }

@@ -15,8 +15,4 @@ public class TileChance extends Tile {
 
     }
 
-    @Override
-    public void renderMarker() {
-
-    }
 }

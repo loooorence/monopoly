@@ -18,4 +18,12 @@ public abstract class DrawableCard extends RenderableObject {
     }
 
     public abstract void onDraw(Player player);
+
+    public CardAction getAction() {
+        return action;
+    }
+
+    public int[] getValues() {
+        return values;
+    }
 }

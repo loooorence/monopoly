@@ -2,6 +2,9 @@ package engine;
 
 import monopoly.util.Timer;
 import org.lwjgl.glfw.*;
+import org.lwjgl.system.MemoryStack;
+
+import java.nio.DoubleBuffer;
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
@@ -45,7 +48,12 @@ public class GameEngine{
             gameLogic.inputKeyboard(key, scancode, action, mods);
         };
         GLFWMouseButtonCallbackI mouseCallbackI = (windowID, button, action, mods) -> {
-            gameLogic.inputMouseButton(button, action, mods);
+            try (MemoryStack stack = MemoryStack.stackPush()) {
+                DoubleBuffer bufferX = stack.mallocDouble(1);
+                DoubleBuffer bufferY = stack.mallocDouble(1);
+                glfwGetCursorPos(windowID, bufferX, bufferY);
+                gameLogic.inputMouseButton(button, action, mods, (float)bufferX.get(), (float)bufferY.get());
+            }
         };
 
         glfwSetKeyCallback(window.getId(), keyCallbackI);

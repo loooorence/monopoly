@@ -9,11 +9,12 @@ import java.util.ArrayList;
 
 public class Player extends InventoryHolder {
 
+    public static final float MOVEMENT_SPEED = 0.05f;
+
     private Tile renderLocation;
     private Tile advanceTile;
     private Tile moveTile;
 
-    private String boardMarker;
     private int spacesToMove;
 
     private Banker banker;
@@ -58,6 +59,11 @@ public class Player extends InventoryHolder {
     public Banker getBanker() {
         return this.banker;
     }
+
+    public void getMoney(int amount) {
+        getBanker().getInventory().getCashStack().trade(this.getInventory(), amount);
+    }
+
 
 
 }

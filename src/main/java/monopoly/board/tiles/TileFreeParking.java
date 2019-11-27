@@ -15,9 +15,4 @@ public class TileFreeParking extends Tile {
 
     }
 
-    @Override
-    public void renderMarker() {
-
-    }
-
 }

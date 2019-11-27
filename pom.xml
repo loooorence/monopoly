@@ -69,7 +69,7 @@
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
-            <artifactId>lwjgl-nuklear</artifactId>
+            <artifactId>lwjgl-nanovg</artifactId>
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
@@ -109,7 +109,7 @@
         </dependency>
         <dependency>
             <groupId>org.lwjgl</groupId>
-            <artifactId>lwjgl-nuklear</artifactId>
+            <artifactId>lwjgl-nanovg</artifactId>
             <classifier>${lwjgl.natives}</classifier>
         </dependency>
         <dependency>
