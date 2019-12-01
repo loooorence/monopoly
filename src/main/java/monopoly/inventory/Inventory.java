@@ -13,7 +13,10 @@ public class Inventory {
     
     public Inventory(ArrayList<PropertyCard> properties, boolean isBanker) {
        this.properties = properties;
-        // TODO: initialize
+       if (isBanker)
+       {
+           this.getCashStack().changeAmount(1000000);
+       }
     }
 
     public ArrayList<PropertyCard> getProperties() {
@@ -34,9 +37,13 @@ public class Inventory {
      * @return
      */
     public boolean sendMoney(InventoryHolder target, int amount) {
-        // TODO: implement sending money
-
-        return false;
+        if (this.getCashStack().getAmount() < amount)
+        {
+            return false;
+        }
+        this.getCashStack().changeAmount(-amount);
+        target.getInventory().getCashStack().changeAmount(amount);
+        return true;
     }
 
     public GetOutOfJailCard getGetOutOfJailCard() {
